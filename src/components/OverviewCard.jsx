@@ -20,14 +20,21 @@ const networkColors = {
 }
 
 const OverviewCard = ({ user, audienceType, audience, network, isUp, today }) => {
+
+  const convertNumberToK = (number) => {
+    if (number >= 10000) {
+      return `${(number / 1000)}k`
+    }
+    return number
+  }
   return (
-    <article className="bg-Light-Grayish-Blue w-[326px] h-[216px] mb-4 rounded-[5px] mx-auto overflow-hidden text-center">
+    <article className="bg-Light-Grayish-Blue w-full h-[216px] mb-4 rounded-[5px] mx-auto overflow-hidden text-center dark:bg-Dark-Desaturated-Blue hover:brightness-95 cursor:pointer hover:dark:brightness-125">
       <div className={`h-1 ${networkColors[network]} mb-8`}></div>
       <div className="flex items-center justify-center gap-2 mb-5">
         <img src={networkLogos[network]} alt="" />
         <p className="text-xs text-Dark-Grayish-Blue font-bold">{user}</p>
       </div>
-      <p className="text-5xl font-bold mb-5 text-Very-Dark-Blue">{audience}</p>
+      <p className="text-5xl font-bold text-Very-Dark-Blue dark:text-white">{convertNumberToK(audience)}</p>
       <p className="uppercase tracking-[5px] text-Dark-Grayish-Blue text-xs mb-6">{audienceType}</p>
       <div className="flex items-center justify-center gap-1">
         <img src={isUp ? iconUp : iconDown} alt="" />
