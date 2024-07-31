@@ -19,7 +19,7 @@ const networkColors = {
   YouTube: "bg-YouTube",
 }
 
-const OverviewCard = ({ user, audienceType, audience, network, isUp, today }) => {
+export const OverviewCard = ({ user, audienceType, audience, network, isUp, today }) => {
 
   const convertNumberToK = (number) => {
     if (number >= 10000) {
@@ -28,7 +28,7 @@ const OverviewCard = ({ user, audienceType, audience, network, isUp, today }) =>
     return number
   }
   return (
-    <article className="bg-Light-Grayish-Blue w-full h-[216px] mb-4 rounded-[5px] mx-auto overflow-hidden text-center dark:bg-Dark-Desaturated-Blue hover:brightness-95 cursor:pointer hover:dark:brightness-125">
+    <article className="bg-Light-Grayish-Blue w-full h-[216px] mb-4 rounded-[5px] mx-auto overflow-hidden text-center dark:bg-Dark-Desaturated-Blue hover:brightness-95 hover:dark:brightness-125 cursor-pointer">
       <div className={`h-1 ${networkColors[network]} mb-8`}></div>
       <div className="flex items-center justify-center gap-2 mb-5">
         <img src={networkLogos[network]} alt="" />
@@ -44,4 +44,14 @@ const OverviewCard = ({ user, audienceType, audience, network, isUp, today }) =>
   );
 };
 
-export default OverviewCard;
+
+export const OverviewTodayCard = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+
+

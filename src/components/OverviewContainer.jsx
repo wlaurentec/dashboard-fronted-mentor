@@ -1,7 +1,7 @@
 import data from "../../data/data.json"
-import OverviewCard from "./OverviewCard"
+import {OverviewCard, OverviewTodayCard} from "./OverviewCard"
 
-const OverviewContainer = () => {
+export const OverviewContainer = () => {
 
   return (
     <section className="absolute top-[196px] left-0 right-0 mx-auto w-[326px]">
@@ -9,6 +9,16 @@ const OverviewContainer = () => {
         <OverviewCard key={item.id} {...item}/>
       ))}
     </section>
+  )
+}
+
+export const OverviewTodayContainer = () => {
+  return (
+    <div>
+      {data["overview-today"].map((item) => (
+        <OverviewTodayCard key={item.id} {...item}/>
+      ))}
+    </div>
   )
 }
 
