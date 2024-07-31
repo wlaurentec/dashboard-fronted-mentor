@@ -3,7 +3,7 @@ import OverviewCard from "./OverviewCard"
 
 const OverviewContainer = () => {
   return (
-    <section>
+    <section className="border border-red-600">
       {data.overview.map((item) => (
         <OverviewCard key={item.id} {...item}/>
       ))}
