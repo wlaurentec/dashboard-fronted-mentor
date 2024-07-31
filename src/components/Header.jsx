@@ -10,8 +10,9 @@ const Header = () => {
       <hr className="bg-black mb-5" />
       <div className="flex justify-between">
         <p className="text-Dark-Desaturated-Blue font-bold">Dark Mode</p>
-        <label htmlFor="darkmode" className="border bg-Toggle w-12 h-6 rounded-full cursor-pointer p-1">
+        <label htmlFor="darkmode" className="border bg-Toggle w-12 h-6 rounded-full overflow-hidden cursor-pointer p-1 inline-flex items-center relative">
           <input type="checkbox" id="darkmode" className="peer sr-only"/>
+          <div className=" w-full h-full peer-checked:bg-Toggle-Gradient absolute top-0 left-0"></div>
           <div className="w-4 h-4 rounded-full bg-Light-Grayish-Blue peer-checked:translate-x-6 transition-all"></div>
         </label>
       </div>

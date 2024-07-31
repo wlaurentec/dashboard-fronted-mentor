@@ -11,8 +11,6 @@ export default {
         "Bright-Red": 'hsl(356, 69%, 56%)',
         "Facebook": 'hsl(208, 92%, 53%)',
         "Twitter": 'hsl(203, 89%, 53%)',
-        // "Instagram-From": 'hsl(37, 97%, 70%)',
-        // InstagramTo: 'hsl(329, 70%, 58%)',
         "YouTube": 'hsl(348, 97%, 39%)',
         "Toggle": "hsl(230, 22%, 74%)",
         // ToggleDarkFrom: 'hsl(210, 78%, 56%)',
@@ -29,6 +27,12 @@ export default {
       },
       fontFamily: {
         'Inter': ['Inter', 'sans-serif']
+      },
+      backgroundImage: {
+        "Toggle-Gradient": "linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))",
+        "Instagram-Gradient": "linear-gradient(to right, hsl(37, 97%, 70%), hsl(146, 68%, 55%))",
+        "ToggleDark": "linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%)",
+        "ToggleLight": "linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%)",
       }
     },
   },
